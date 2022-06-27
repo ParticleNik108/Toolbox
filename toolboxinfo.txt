@@ -1,0 +1,18 @@
+These are some tools to assist with processing and formatting the data correctly
+for a cnn. 
+
+The cnn_data_tools etc assist with condensing the extracted signals in a 
+dataframe form to that of a "condensed" form where each row denotes an image
+and there are 120 columns  (4x30).
+
+Before being sent to a cnn they must then be pre-processed and reshaped in 
+a 4x30 form. 
+
+The PulseHeight.R code assists with producing pulse height plots from the 
+condensed data both image heatmaps and just the average signal on its own.
+
+The Distributiontools.R file assists with producing histograms concerning the
+mean ADC, ADC sums etc for condensed data. 
+
+
+
