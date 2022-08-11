@@ -3,22 +3,27 @@
 
 # First source all our tools we have coded ! 
 
+suppressPackageStartupMessages({
 source("cnn_data_formatter.R")
 source("cnn_data_tools.R")
 source("Distributiontools.R")
 source("plot_sample_sigs.R")
 source("Pulse_Height.R")
 source("trd_signal_extractor.R")
+})
+
 
 # Next lets ensure we have all the packaes needed
+
+suppressPackageStartupMessages({
 library(tidyverse)
 library(ggplot2)
-library(ggpubr)
+#library(ggpubr)
 library(patchwork)
 library(gridExtra)
 library(reticulate)
 library(reshape2)
-
+})
 
 
 pions <- read.csv("digits_data_pion.csv")
@@ -47,7 +52,11 @@ ggsave("AdcSdDist.png", plot=dist_adc_sd(sig_cd[, -c(121)]),  width = 8, height 
 
 ggsave("AvgPh.png",plot=avgpulse2(sig_cd)[[1]], width = 8, height = 6)
 
+dist_adc_sum(sig_cd[, -c(121)])
+dist_adc_mean(sig_cd[, -c(121)])
+dist_adc_sd(sig_cd[, -c(121)])
 
+avgpulse2(sig_cd)[[1]]
 
 imgph(sig_cd)
 
