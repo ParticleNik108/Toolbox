@@ -50,7 +50,7 @@ avgpulse <- function(df) {
     geom_point(col="firebrick", size=2) + 
     geom_line(col="firebrick3", lwd=0.9) + 
     labs(x="Time bin", y="ADC", title ="Average Pulse Height") + 
-    theme_pubr(border = T)
+    theme_bw()
   return(list(phplot, meanadc))
   
   
@@ -83,7 +83,7 @@ avgpulse2 <- function(df, pc="firebrick", lc="brown3") {
     geom_point(col=pc, size=2.3) + 
     geom_line(col=lc, lwd=0.91) + 
     labs(x="Time bin (100ns)", y="ADC", title ="Average Pulse Height") + 
-    theme_pubr(border = T) +  
+    theme_bw() +  
     theme(plot.title = element_text(hjust = 0.5))    # center title text 
   
   return(list(phplot, ph_df))
