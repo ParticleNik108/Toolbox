@@ -36,7 +36,7 @@ sig_dataframe <- get_TRD_signals(pions)
 # Now get the Condensed Signals 
 sig_cd <- condense(sig_dataframe)
 #save(sig_cd, file = "sig_cd.RData")
-
+write.csv(sig_cd, file="sig_cd.csv", row.names=FALSE)
 
 # Process into cnn format 
 sig_pics <- cnn_preprocess(sig_cd)
